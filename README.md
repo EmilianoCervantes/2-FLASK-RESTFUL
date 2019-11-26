@@ -29,5 +29,8 @@ Ejemplo:
 1. pip install Flask-RESTful --\> 0.3.7
   - flask 1.1.1 se instaló en conjunto
 
+# Diseño: TEST first
+
+
 # Comandos terminal:
 1. pip3 freeze --\> listado de librerías de python instaladas
