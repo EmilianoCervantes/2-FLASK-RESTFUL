@@ -12,13 +12,17 @@ Ej: API de la sección 3 usa flask v.1.0.3
 Usar ambientes virtuales para la reinstalación de Python sin librerías
 
 \> pip3 install virtualenv
+
 \> virtualenv venv --python=pythonX.x
+
 Ejemplo:
+
 \> virtualenv venv --python=python3.7
 
 ##### Crea un folder 'venv' donde se instala python
 
 \> source venv/bin/activate --\> Esto nos manda al virtual environment
+
 \> deactivate --\> para salir
 
 ## Instalaciones
