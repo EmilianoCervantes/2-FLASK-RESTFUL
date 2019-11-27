@@ -30,14 +30,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:5000/item/<name>",
+					"raw": "localhost:5000/item/Manzana",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
 						"item",
-						"<name>"
+						"Manzana"
 					]
 				},
 				"description": "Debe regresar un elemento en específico"
@@ -51,23 +51,23 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"type": "text",
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"precio\": 14.99\n}"
+					"raw": "{\n\t\"precio\": 9.99\n}"
 				},
 				"url": {
-					"raw": "localhost:5000/item/<name>",
+					"raw": "localhost:5000/item/Manzana",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
 						"item",
-						"<name>"
+						"Manzana"
 					]
 				},
 				"description": "Agregar un nuevo elemento sin repeticiones"
