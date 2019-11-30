@@ -28,6 +28,9 @@ Ejemplo:
 ## Instalaciones
 1. pip install Flask-RESTful --\> 0.3.7
   - flask 1.1.1 se instaló en conjunto
+2. pip install Flask-JWT
+  - Flask-JWT-0.3.2
+  - PyJWT-1.4.2
 
 # Diseño: TEST first
 

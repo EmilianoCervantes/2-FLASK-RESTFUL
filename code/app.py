@@ -3,7 +3,11 @@ from flask import Flask, request
 from flask_restful import Resource, Api
 
 app = Flask(__name__)
-
+'''
+La llave sectreta puede ser el texto que queramos,
+generalmente es largo para hacerlo más complicado.
+'''
+app.secret_key('lo_que_sea')
 '''
 
 Api() trabaja con resources
@@ -33,14 +37,13 @@ class Item(Resource):
         return { 'name': None }, 404
 
     def post(self, name):
-        data = request.get_json()
-
-        nombre = self.get(name)
-
         # Porque se le agregó el 404 se regresa esto:
         # ({'name': None}, 404) ... el if hace cosas raras
+        nombre = self.get(name)
         if nombre[1] != 404:
-            return 'Ya existe'
+            return f'Ya existe {nombre}', 400
+
+        data = request.get_json()
 
         item = { 'name': name, 'price': data['precio'] }
         items.append(item)
