@@ -33,6 +33,9 @@ username_mapping = { u.username: u for u in users }
 
 userid_mapping = { u.id: u for u in users }
 
+# Se llama automáticamente a través de JWT(..., authenticate, ...)
+# cuando se manda unan credenciales al endpoint /auth
+
 def authenticate(username, password):
     # Agregamos un valor por default
     # Si no se encuentra el nombre, regresamos como default None
@@ -43,6 +46,7 @@ def authenticate(username, password):
     return None
 
 # Payload es el contenido del token jwt
+# Se llama automáticamente gracias a JWT(..., identity)
 def identity(payload):
     user_id = payload['identity']
     return userid_mapping.get(user_id, None)
