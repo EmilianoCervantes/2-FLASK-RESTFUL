@@ -7,7 +7,7 @@ app = Flask(__name__)
 La llave sectreta puede ser el texto que queramos,
 generalmente es largo para hacerlo más complicado.
 '''
-app.secret_key('lo_que_sea')
+app.secret_key = 'lo_que_sea'
 '''
 
 Api() trabaja con resources
